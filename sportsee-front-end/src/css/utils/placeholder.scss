@@ -1,0 +1,10 @@
+@use '../utils/variables' as variables;
+
+
+%btn-dark{
+    text-decoration: none;
+    padding: variables.$spacing-xs;
+    background-color: variables.$dark-color;
+    color: variables.$white-color;
+    border-radius: variables.$radius-md;
+}

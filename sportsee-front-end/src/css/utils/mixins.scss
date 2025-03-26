@@ -1,0 +1,30 @@
+@mixin display(
+  $display,
+  $column: false,
+  $direction: false,
+  $justifyContent: false,
+  $alignItems: false,
+  $gap: false
+) {
+  @if ($display == flex) {
+    display: flex;
+    @debug "display : #{display}";
+    @if ($direction) {
+      flex-direction: $direction;
+    }
+    @if ($justifyContent) {
+      justify-content: $justifyContent;
+    }
+    @if ($alignItems) {
+      align-items: $alignItems;
+    }
+  } @else if($display == grid) {
+    @debug "display : #{display}";
+    display: grid;
+    grid-template-columns: $column;
+  }
+
+  @if ($gap) {
+    gap: $gap;
+  }
+}

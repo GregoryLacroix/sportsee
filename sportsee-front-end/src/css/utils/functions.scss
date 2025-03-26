@@ -1,0 +1,11 @@
+@function calculate-width($operator, $col-gap){
+    @if($operator == '-'){
+        @return calc(100% - ($col-gap));
+    }
+}
+
+@function calculate-height($operator, $col-gap){
+    @if($operator == '-'){
+        @return calc(100% - ($col-gap));
+    }
+}
